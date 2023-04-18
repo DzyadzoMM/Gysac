@@ -25,11 +25,11 @@ install:
   - export PATH=$PATH:~/.local/bin/
   - ls -la
   - echo "TODO COMPILE 32bit"
-  - yes | cp -f buildozer-32bit.spec buildozer.spec
+  - yes | cp -f buildozer-64bit.spec buildozer.spec
   - yes | travis_wait 20 buildozer android debug
   - ls -la
   - ls bin/ -l
   - echo "TODO"
   - gem install dpl --pre
-  - dpl releases --token $GITHUB_TOKEN --file "bin/mortgagecalculator-2.3-armeabi-v7a-debug.apk" --tag_name "v.0.1"
+  - dpl releases --token $GITHUB_TOKEN --file "bin/mortgagecalculator-2.3--debug.apk" --tag_name "v.0.1"
   - echo "OK"
